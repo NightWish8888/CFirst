@@ -12,7 +12,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    LeftMenuViewController *lvc = [[LeftMenuViewController alloc] init];
+    CenterViewController *cvc = [[CenterViewController alloc] init];
+    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:cvc leftDrawerViewController:lvc];
+    [self.drawerController setMaximumLeftDrawerWidth:150.0f];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [self.window setRootViewController:self.drawerController];
     return YES;
 }
 							
