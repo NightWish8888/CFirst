@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 Zhu Zhihai. All rights reserved.
 //
 
-#import "CenterVCCell.h"
+#import "FirstCorpsVCCell.h"
 
-@implementation CenterVCCell
+@implementation FirstCorpsVCCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

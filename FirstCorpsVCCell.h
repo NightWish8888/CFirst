@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CenterVCCell : UITableViewCell
+@interface FirstCorpsVCCell : UITableViewCell
 
 @end

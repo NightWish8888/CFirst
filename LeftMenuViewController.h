@@ -6,6 +6,11 @@
 //  Copyright (c) 2014年 Zhu Zhihai. All rights reserved.
 //
 
+@protocol LeftMenuViewControllerDelegate <NSObject>
+
+-(void)showViewControllerAtSelectedIndex:(NSInteger)index;
+@end
+
 #import <UIKit/UIKit.h>
 #import "UIViewController+MMDrawerController.h"
 #import "LeftMenuCell.h"
@@ -17,5 +22,5 @@
 @property (retain, nonatomic) IBOutlet UIImageView *logoImgView;
 @property (retain, nonatomic) IBOutlet UILabel *nameLabel;
 
-
+@property (nonatomic,assign) id<LeftMenuViewControllerDelegate> selectVCDelegate;
 @end

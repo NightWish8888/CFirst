@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CenterViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstCorpsViewController">
             <connections>
                 <outlet property="cNavigationBar" destination="lNg-s2-9FR" id="8vD-h9-1F5"/>
                 <outlet property="centerLabel" destination="Dof-jp-KCT" id="G9F-bD-bcV"/>

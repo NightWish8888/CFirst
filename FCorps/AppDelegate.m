@@ -14,6 +14,7 @@
 {
     LeftMenuViewController *lvc = [[LeftMenuViewController alloc] init];
     CenterViewController *cvc = [[CenterViewController alloc] init];
+    lvc.selectVCDelegate = cvc;
     self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:cvc leftDrawerViewController:lvc];
     [self.drawerController setMaximumLeftDrawerWidth:150.0f];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];

@@ -41,6 +41,11 @@
     [self.dataSource addObject:[self createDicInfo:@"menu3.png" Title:@"我的军营"]];
     [self.dataSource addObject:[self createDicInfo:@"menu4.png" Title:@"兵团新闻"]];
     [self.dataSource addObject:[self createDicInfo:@"menu5.png" Title:@"立元嘉合"]];
+    [self.tableView reloadData];
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    if (_selectVCDelegate && [_selectVCDelegate respondsToSelector:@selector(showViewControllerAtSelectedIndex:)]) {
+        [_selectVCDelegate showViewControllerAtSelectedIndex:0];
+    }
 }
 -(NSMutableDictionary *)createDicInfo:(NSString *)imgName  Title:(NSString *)title{
     NSMutableDictionary *dicInfo = [NSMutableDictionary dictionaryWithCapacity:1];
@@ -56,6 +61,7 @@
 
 - (IBAction)showPersonInfo:(id)sender {
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    
 }
 - (void)dealloc {
     [_tableView release];
@@ -96,8 +102,9 @@
 #pragma mark UITableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
-    
-    
+    if (_selectVCDelegate && [_selectVCDelegate respondsToSelector:@selector(showViewControllerAtSelectedIndex:)]) {
+        [_selectVCDelegate showViewControllerAtSelectedIndex:row];
+    }
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #ifndef FCorps_NotificationMacro_h
 #define FCorps_NotificationMacro_h
-
+#define kShowMenuNotification   @"showmenunotification"
 
 
 #endif
